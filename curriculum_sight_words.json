@@ -1,0 +1,152 @@
+{
+    "Level_1": {
+        "lvl_nbr": 1,
+        "milestone_range": {
+            "start": 1,
+            "end": 3
+        },
+        "lvl__sight_words": [
+            "the",
+            "what",
+            "no",
+            "to",
+            "have",
+            "go",
+            "I",
+            "you",
+            "they",
+            "was",
+            "for",
+            "all",
+            "he",
+            "of",
+            "put",
+            "she",
+            "do",
+            "I'm",
+            "me",
+            "are",
+            "could",
+            "be",
+            "my",
+            "would",
+            "we",
+            "time",
+            "there",
+            "out",
+            "day",
+            "about",
+            "don't",
+            "her"
+        ]
+    },
+    "Level_2": {
+        "lvl_nbr": 2,
+        "milestone_range": {
+            "start": 4,
+            "end": 6
+        },
+        "lvl__sight_words": [
+            "come",
+            "where",
+            "call",
+            "some",
+            "when",
+            "want",
+            "down",
+            "who",
+            "here",
+            "were",
+            "give",
+            "after",
+            "know",
+            "your",
+            "before"
+        ]
+    },
+    "Level_3": {
+        "lvl_nbr": 3,
+        "milestone_range": {
+            "start": 7,
+            "end": 10
+        },
+        "lvl__sight_words": [
+            "so",
+            "work",
+            "love",
+            "their",
+            "one",
+            "over",
+            "sure",
+            "two",
+            "knew",
+            "because",
+            "only",
+            "woman",
+            "done",
+            "does",
+            "other"
+        ]
+    },
+    "Level_4": {
+        "lvl_nbr": 4,
+        "milestone_range": {
+            "start": 11,
+            "end": 13
+        },
+        "lvl__sight_words": [
+            "Monday",
+            "said",
+            "people",
+            "Tuesday",
+            "old",
+            "women",
+            "Wednesday",
+            "gone",
+            "once",
+            "Thursday",
+            "any",
+            "use",
+            "Friday",
+            "money",
+            "most",
+            "Saturday",
+            "friend",
+            "buy",
+            "Sunday"
+        ]
+    },
+    "Level_5": {
+        "lvl_nbr": 5,
+        "milestone_range": {
+            "start": 14,
+            "end": 15
+        },
+        "lvl__sight_words": [
+            "January",
+            "father",
+            "February",
+            "son",
+            "March",
+            "daughter",
+            "April",
+            "auntie",
+            "May",
+            "nephew",
+            "June",
+            "niece",
+            "July",
+            "laugh",
+            "August",
+            "enough",
+            "September",
+            "won't",
+            "October",
+            "wash",
+            "November",
+            "water",
+            "December",
+            "pretty"
+        ]
+    }
+}

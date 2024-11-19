@@ -1,0 +1,973 @@
+{
+    "sound_a": {
+    "sound": "a",
+    "patterns": [
+        {
+        "pattern": "a",
+        "level": 1,
+        "description": "short vowel",
+        "examples": ["cat"]
+        }
+    ]
+    },
+    "sound_b": {
+    "sound": "b",
+    "patterns": [
+        {
+        "pattern": "b",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["bun"]
+        },
+        {
+        "pattern": "bb",
+        "level": 2,
+        "description": "double consonant",
+        "examples": ["rabbit"]
+        }
+    ]
+    },
+    "sound_c": {
+    "sound": "c",
+    "patterns": [
+        {
+        "pattern": "c",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["cow"]
+        },
+        {
+        "pattern": "ck",
+        "level": 1,
+        "description": "consonant combination",
+        "examples": ["luck"]
+        },
+        {
+        "pattern": "k",
+        "level": 1,
+        "description": "alternative spelling",
+        "examples": ["kite"]
+        }
+    ]
+    },
+    "sound_d": {
+    "sound": "d",
+    "patterns": [
+        {
+        "pattern": "d",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["dog"]
+        },
+        {
+        "pattern": "dd",
+        "level": 1,
+        "description": "double consonant",
+        "examples": ["add"]
+        }
+    ]
+    },
+    "sound_e": {
+    "sound": "e",
+    "patterns": [
+        {
+        "pattern": "e",
+        "level": 1,
+        "description": "short vowel",
+        "examples": ["leg"]
+        },
+        {
+        "pattern": "ea",
+        "level": 4,
+        "description": "vowel combination",
+        "examples": ["head"]
+        }
+    ]
+    },
+    "sound_f": {
+    "sound": "f",
+    "patterns": [
+        {
+        "pattern": "f",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["fat"]
+        },
+        {
+        "pattern": "ff",
+        "level": 1,
+        "description": "double consonant",
+        "examples": ["stiff"]
+        },
+        {
+        "pattern": "ph",
+        "level": 5,
+        "description": "digraph",
+        "examples": ["phone"]
+        }
+    ]
+    },
+    "sound_g": {
+    "sound": "g",
+    "patterns": [
+        {
+        "pattern": "g",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["bag"]
+        },
+        {
+        "pattern": "gg",
+        "level": 1,
+        "description": "double consonant",
+        "examples": ["egg"]
+        }
+    ]
+    },
+    "sound_h": {
+    "sound": "h",
+    "patterns": [
+        {
+        "pattern": "h",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["hand"]
+        }
+    ]
+    },
+    "sound_i": {
+    "sound": "i",
+    "patterns": [
+        {
+        "pattern": "i",
+        "level": 1,
+        "description": "short vowel",
+        "examples": ["in"]
+        }
+    ]
+    },
+    "sound_j": {
+    "sound": "j",
+    "patterns": [
+        {
+        "pattern": "j",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["jug"]
+        },
+        {
+        "pattern": "gi",
+        "level": 4,
+        "description": "soft g before i",
+        "examples": ["giant"]
+        },
+        {
+        "pattern": "dge",
+        "level": 4,
+        "description": "trigraph",
+        "examples": ["hedge"]
+        },
+        {
+        "pattern": "gy",
+        "level": 4,
+        "description": "soft g before y",
+        "examples": ["gyrate"]
+        },
+        {
+        "pattern": "ge",
+        "level": 4,
+        "description": "soft g before e",
+        "examples": ["ginger"]
+        }
+    ]
+    },
+    "sound_l": {
+        "sound": "l",
+        "patterns": [
+        {
+            "pattern": "l",
+            "level": 1,
+            "description": "consonant",
+            "examples": ["lip"]
+        },
+        {
+            "pattern": "ll",
+            "level": 1,
+            "description": "double consonant",
+            "examples": ["full"]
+        }
+        ]
+    },
+    "sound_m": {
+        "sound": "m",
+        "patterns": [
+        {
+            "pattern": "m",
+            "level": 1,
+            "description": "consonant",
+            "examples": ["men"]
+        },
+        {
+            "pattern": "mm",
+            "level": 2,
+            "description": "double consonant",
+            "examples": ["comma"]
+        }
+        ]
+    },
+    "sound_n": {
+        "sound": "n",
+        "patterns": [
+        {
+            "pattern": "n",
+            "level": 1,
+            "description": "consonant",
+            "examples": ["not"]
+        },
+        {
+            "pattern": "nn",
+            "level": 2,
+            "description": "double consonant",
+            "examples": ["sunny"]
+        }
+        ]
+    },
+    "sound_o": {
+    "sound": "o",
+    "patterns": [
+        {
+        "pattern": "o",
+        "level": 1,
+        "description": "short vowel",
+        "examples": ["pot"]
+        }
+    ]
+    },
+    "sound_p": {
+    "sound": "p",
+    "patterns": [
+        {
+        "pattern": "p",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["hop"]
+        },
+        {
+        "pattern": "pp",
+        "level": 2,
+        "description": "double consonant",
+        "examples": ["happy"]
+        }
+    ]
+    },
+    "sound_qu": {
+    "sound": "qu",
+    "patterns": [
+        {
+        "pattern": "qu",
+        "level": 1,
+        "description": "consonant combination",
+        "examples": ["quick"]
+        }
+    ]
+    },
+    "sound_r": {
+    "sound": "r",
+    "patterns": [
+        {
+        "pattern": "r",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["rib"]
+        },
+        {
+        "pattern": "rr",
+        "level": 2,
+        "description": "double consonant",
+        "examples": ["horrid"]
+        }
+    ]
+    },
+    "sound_s": {
+    "sound": "s",
+    "patterns": [
+        {
+        "pattern": "s",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["sun"]
+        },
+        {
+        "pattern": "ss",
+        "level": 1,
+        "description": "double consonant",
+        "examples": ["mess"]
+        },
+        {
+        "pattern": "c",
+        "level": 4,
+        "description": "soft c",
+        "examples": ["city", "race", "cycle"]
+        }
+    ]
+    },
+    "sound_t": {
+    "sound": "t",
+    "patterns": [
+        {
+        "pattern": "t",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["top"]
+        },
+        {
+        "pattern": "tt",
+        "level": 2,
+        "description": "double consonant",
+        "examples": ["potted"]
+        }
+    ]
+    },
+    "sound_u": {
+    "sound": "u",
+    "patterns": [
+        {
+        "pattern": "u",
+        "level": 1,
+        "description": "short vowel",
+        "examples": ["run"]
+        }
+    ]
+    },
+    "sound_v": {
+    "sound": "v",
+    "patterns": [
+        {
+        "pattern": "v",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["van"]
+        }
+    ]
+    },
+    "sound_w": {
+    "sound": "w",
+    "patterns": [
+        {
+        "pattern": "w",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["win"]
+        },
+        {
+        "pattern": "wh",
+        "level": 2,
+        "description": "digraph",
+        "examples": ["when"]
+        }
+    ]
+    },
+    "sound_x": {
+    "sound": "x (ks)",
+    "patterns": [
+        {
+        "pattern": "x",
+        "level": 1,
+        "description": "consonant combination",
+        "examples": ["tax"]
+        }
+    ]
+    },
+    "sound_y": {
+    "sound": "y",
+    "patterns": [
+        {
+        "pattern": "y",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["yes"]
+        }
+    ]
+    },
+    "sound_z": {
+    "sound": "z",
+    "patterns": [
+        {
+        "pattern": "z",
+        "level": 1,
+        "description": "consonant",
+        "examples": ["zip"]
+        },
+        {
+        "pattern": "zz",
+        "level": 1,
+        "description": "double consonant",
+        "examples": ["jazz"]
+        }
+    ]
+    },
+    "sound_th": {
+    "sound": "th",
+    "patterns": [
+        {
+        "pattern": "th",
+        "level": 1,
+        "description": "consonant digraph",
+        "examples": ["then", "moth"]
+        }
+    ]
+    },
+    "sound_ch": {
+    "sound": "ch",
+    "patterns": [
+        {
+        "pattern": "ch",
+        "level": 1,
+        "description": "consonant digraph",
+        "examples": ["chop"]
+        },
+        {
+        "pattern": "tch",
+        "level": 5,
+        "description": "trigraph",
+        "examples": ["match"]
+        }
+    ]
+    },
+    "sound_sh": {
+    "sound": "sh",
+    "patterns": [
+        {
+        "pattern": "sh",
+        "level": 1,
+        "description": "consonant digraph",
+        "examples": ["rush"]
+        },
+        {
+        "pattern": "ti",
+        "level": 5,
+        "description": "consonant combination",
+        "examples": ["station"]
+        },
+        {
+        "pattern": "ssi",
+        "level": 5,
+        "description": "consonant combination",
+        "examples": ["session"]
+        },
+        {
+        "pattern": "ci",
+        "level": 5,
+        "description": "consonant combination",
+        "examples": ["musician"]
+        }
+    ]
+    },
+    "sound_ng": {
+    "sound": "ng",
+    "patterns": [
+        {
+        "pattern": "ng",
+        "level": 1,
+        "description": "consonant digraph",
+        "examples": ["rang"]
+        }
+    ]
+    },
+    "sound_nk": {
+    "sound": "nk",
+    "patterns": [
+        {
+        "pattern": "nk",
+        "level": 1,
+        "description": "consonant combination",
+        "examples": ["rank"]
+        }
+    ]
+    },
+    "sound_zh": {
+    "sound": "zh",
+    "patterns": [
+        {
+        "pattern": "si",
+        "level": 5,
+        "description": "consonant combination",
+        "examples": ["television"]
+        }
+    ]
+    },
+    "long_a_sounds": {
+    "sound": "(Long) ā",
+    "patterns": [
+        {
+        "pattern": "ai",
+        "level": 2,
+        "description": "vowel digraph",
+        "examples": ["rain"]
+        },
+        {
+        "pattern": "ay",
+        "level": 2,
+        "description": "vowel digraph",
+        "examples": ["day"]
+        },
+        {
+        "pattern": "a_e",
+        "level": 3,
+        "description": "split digraph",
+        "examples": ["made", "tape", "male", "pane", "same", "rate", "lake", "bake", "gate", "scrape"]
+        },
+        {
+        "pattern": "eigh",
+        "level": 5,
+        "description": "vowel combination",
+        "examples": ["eight"]
+        },
+        {
+        "pattern": "ey",
+        "level": 5,
+        "description": "vowel combination",
+        "examples": ["they"]
+        },
+        {
+        "pattern": "ea",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["great"]
+        },
+        {
+        "pattern": "able",
+        "level": 5,
+        "description": "suffix",
+        "examples": ["able"]
+        }
+    ]
+    },
+    "long_e_sounds": {
+    "sound": "(Long) ē",
+    "patterns": [
+        {
+        "pattern": "ee",
+        "level": 2,
+        "description": "vowel digraph",
+        "examples": ["tree"]
+        },
+        {
+        "pattern": "ea",
+        "level": 2,
+        "description": "vowel digraph",
+        "examples": ["tea"]
+        },
+        {
+        "pattern": "y",
+        "level": 2,
+        "description": "vowel at end",
+        "examples": ["very"]
+        },
+        {
+        "pattern": "e_e",
+        "level": 3,
+        "description": "split digraph",
+        "examples": ["these", "theme", "athlete", "concrete", "trapeze", "extreme", "discrete", "complete", "Steve", "compete"]
+        },
+        {
+        "pattern": "ie",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["relief"]
+        },
+        {
+        "pattern": "ey",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["key"]
+        },
+        {
+        "pattern": "e",
+        "level": 5,
+        "description": "vowel",
+        "examples": ["me"]
+        },
+        {
+        "pattern": "ei",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["receive"]
+        },
+        {
+        "pattern": "ious",
+        "level": 5,
+        "description": "suffix",
+        "examples": ["serious"]
+        }
+    ]
+    },
+    "long_o_sounds": {
+    "sound": "(Long) ō",
+    "patterns": [
+        {
+        "pattern": "oa",
+        "level": 2,
+        "description": "vowel digraph",
+        "examples": ["boat"]
+        },
+        {
+        "pattern": "ow",
+        "level": 2,
+        "description": "vowel digraph",
+        "examples": ["grow"]
+        },
+        {
+        "pattern": "o_e",
+        "level": 3,
+        "description": "split digraph",
+        "examples": ["hope", "smoke", "note", "slope", "rode", "code", "cope", "home", "mope", "spoke"]
+        },
+        {
+        "pattern": "oe",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["toe"]
+        },
+        {
+        "pattern": "ough",
+        "level": 5,
+        "description": "vowel combination",
+        "examples": ["though"]
+        },
+        {
+        "pattern": "o",
+        "level": 5,
+        "description": "vowel",
+        "examples": ["open"]
+        },
+        {
+        "pattern": "ew",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["sew"]
+        }
+    ]
+    },
+    "long_i_sounds": {
+    "sound": "(Long) ī",
+    "patterns": [
+        {
+        "pattern": "y",
+        "level": 2,
+        "description": "vowel",
+        "examples": ["my"]
+        },
+        {
+        "pattern": "igh",
+        "level": 2,
+        "description": "trigraph",
+        "examples": ["fight"]
+        },
+        {
+        "pattern": "i_e",
+        "level": 3,
+        "description": "split digraph",
+        "examples": ["ride", "wine", "fine", "spine", "ripe", "swipe", "spite", "bite", "like", "bike"]
+        },
+        {
+        "pattern": "ie",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["tie"]
+        },
+        {
+        "pattern": "i",
+        "level": 5,
+        "description": "vowel",
+        "examples": ["virus"]
+        },
+        {
+        "pattern": "eigh",
+        "level": 5,
+        "description": "vowel combination",
+        "examples": ["height"]
+        }
+    ]
+    },
+    "long_u_sounds": {
+    "sound": "(Long) ū",
+    "patterns": [
+        {
+        "pattern": "oo",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["shoot"]
+        },
+        {
+        "pattern": "oo",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["book"]
+        },
+        {
+        "pattern": "ue",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["cue"]
+        },
+        {
+        "pattern": "ew",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["few"]
+        },
+        {
+        "pattern": "u_e",
+        "level": 3,
+        "description": "split digraph",
+        "examples": ["cube", "tune", "use", "rude", "June", "cute", "tube", "fuse", "nude", "pure"]
+        },
+        {
+        "pattern": "ou",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["soup"]
+        },
+        {
+        "pattern": "o",
+        "level": 5,
+        "description": "vowel",
+        "examples": ["do"]
+        },
+        {
+        "pattern": "u",
+        "level": 5,
+        "description": "vowel",
+        "examples": ["super"]
+        },
+        {
+        "pattern": "ui",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["suit"]
+        }
+    ]
+    },
+    "sound_ar": {
+    "sound": "ar",
+    "patterns": [
+        {
+        "pattern": "ar",
+        "level": 2,
+        "description": "r-controlled vowel",
+        "examples": ["card"]
+        }
+    ]
+    },
+    "sound_er": {
+    "sound": "er",
+    "patterns": [
+    {
+        "pattern": "er",
+        "level": 3,
+        "description": "r-controlled vowel",
+        "examples": ["her", "term", "bitter", "herb", "infer", "better", "chatter", "verb", "sister", "faster", "transfer", "stern"]
+        },
+        {
+        "pattern": "ur",
+        "level": 3,
+        "description": "r-controlled vowel",
+        "examples": ["burn", "hurt", "church", "blur", "curl", "fur", "furnish", "Thursday", "turn", "slur", "surf", "burst"]
+        },
+        {
+        "pattern": "ir",
+        "level": 3,
+        "description": "r-controlled vowel",
+        "examples": ["first", "dirt", "skirt", "sir", "bird", "girl", "birthday", "thirty", "stir", "third", "firm", "birth"]
+        },
+        {
+        "pattern": "our",
+        "level": 5,
+        "description": "r-controlled vowel",
+        "examples": ["colour"]
+        },
+        {
+        "pattern": "or",
+        "level": 5,
+        "description": "r-controlled vowel",
+        "examples": ["doctor"]
+        },
+        {
+        "pattern": "ear",
+        "level": 5,
+        "description": "r-controlled vowel",
+        "examples": ["earth"]
+        },
+        {
+        "pattern": "ar",
+        "level": 5,
+        "description": "r-controlled vowel",
+        "examples": ["collar"]
+        }
+    ]
+    },
+    "sound_ow": {
+    "sound": "ow",
+    "patterns": [
+        {
+        "pattern": "ou",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["house"]
+        },
+        {
+        "pattern": "ow",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["cow"]
+        }
+    ]
+    },
+    "sound_oi": {
+    "sound": "oi",
+    "patterns": [
+        {
+        "pattern": "oi",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["soil"]
+        },
+        {
+        "pattern": "oy",
+        "level": 3,
+        "description": "vowel digraph",
+        "examples": ["boy"]
+        }
+    ]
+    },
+    "sound_or": {
+    "sound": "or",
+    "patterns": [
+    {
+        "pattern": "or",
+        "level": 4,
+        "description": "r-controlled vowel",
+        "examples": ["for", "more"]
+        },
+        {
+        "pattern": "aw",
+        "level": 4,
+        "description": "vowel digraph",
+        "examples": ["yawn"]
+        },
+        {
+        "pattern": "au",
+        "level": 4,
+        "description": "vowel digraph",
+        "examples": ["fraud"]
+        },
+        {
+        "pattern": "oa",
+        "level": 5,
+        "description": "vowel digraph",
+        "examples": ["board"]
+        },
+        {
+        "pattern": "oor",
+        "level": 5,
+        "description": "r-controlled vowel",
+        "examples": ["door"]
+        },
+        {
+        "pattern": "ought",
+        "level": 5,
+        "description": "vowel combination",
+        "examples": ["thought"]
+        },
+        {
+        "pattern": "ar",
+        "level": 5,
+        "description": "r-controlled vowel",
+        "examples": ["warm"]
+        },
+        {
+        "pattern": "our",
+        "level": 5,
+        "description": "r-controlled vowel",
+        "examples": ["court"]
+        }
+    ]
+    },
+    "sound_ul": {
+    "sound": "ul",
+    "patterns": [
+        {
+        "pattern": "le",
+        "level": 4,
+        "description": "ending",
+        "examples": ["handle"]
+        },
+        {
+        "pattern": "al",
+        "level": 4,
+        "description": "ending",
+        "examples": ["medal"]
+        },
+        {
+        "pattern": "ul",
+        "level": 4,
+        "description": "suffix",
+        "examples": ["skilful"]
+        },
+        {
+        "pattern": "ol",
+        "level": 5,
+        "description": "ending",
+        "examples": ["petrol"]
+        },
+        {
+        "pattern": "el",
+        "level": 5,
+        "description": "ending",
+        "examples": ["funnel"]
+        },
+        {
+        "pattern": "il",
+        "level": 5,
+        "description": "ending",
+        "examples": ["evil"]
+        }
+    ]
+    },
+    "sound_air": {
+    "sound": "air",
+    "patterns": [
+        {
+        "pattern": "air",
+        "level": 4,
+        "description": "trigraph",
+        "examples": ["hair"]
+        },
+        {
+        "pattern": "are",
+        "level": 4,
+        "description": "split trigraph",
+        "examples": ["bare"]
+        },
+        {
+        "pattern": "ear",
+        "level": 4,
+        "description": "trigraph",
+        "examples": ["wear"]
+        }
+    ]
+    },
+    "sound_chur": {
+    "sound": "chur",
+    "patterns": [
+        {
+        "pattern": "ture",
+        "level": 5,
+        "description": "ending",
+        "examples": ["picture"]
+        }
+    ]
+    }
+}
+
