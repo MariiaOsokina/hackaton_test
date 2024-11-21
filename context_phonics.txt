@@ -1,0 +1,15 @@
+CONCEPT OF PHONICS:
+The phonic approach is about identifying the sounds within words and matching them to the letters of the alphabet that represent these sounds.
+There are 44 sounds called phonemes in the English language. These are represented in written text by letters of the alphabet. There are only 26 letters in the alphabet with which to represent these 44 phonemes. So we use both single letters and groups of letters (graphemes) to represent all 44 phonemes.
+There are three things to remember about the phonic approach to reading:
+
+1. One sound (phoneme) can be represented by 1, 2, 3 or 4 letters (graphemes) such as:
+
+[Table format]
+1 letter | 2 letters | 3 letters | 4 letters
+c_a_t | sh_i_p | n_igh_t | th_ough
+
+2. One sound can be represented by different combinations of letters, such as the long ō which can be written as:
+most    toe    float    note    slow    though    sew
+3. One spelling can represent different sounds such as:
+few and sew, plough, though and cough
