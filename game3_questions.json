@@ -6,32 +6,32 @@
             "context": "Family Life",
             "phonics": "er sound",
             "pattern": "er, ir",
-            "question_text": "My younger _____ was helping me clean the dirty floor when a _____ flew in through the window.",
+            "question_text": "My _____ always makes dinner on Thursday night, while my little _____ helps set the table.",
             "gaps": 2,
             "options": [
-                "bird",
-                "sister"
+                "sister",
+                "girl"
             ],
             "correct_order": [
                 "sister",
-                "bird"
+                "girl"
             ]
         },
         {
             "question_id": "2",
             "question_type": "gap-fill",
-            "context": "Daily Activities",
+            "context": "Weather and Activities",
             "phonics": "er sound",
-            "pattern": "ur, er",
-            "question_text": "Every _____ morning, I feel _____ after exercising at the gym with my friend.",
+            "pattern": "ur, ir",
+            "question_text": "During the _____ of the storm, we watched the leaves _____ in the strong wind.",
             "gaps": 2,
             "options": [
-                "better",
-                "Thursday"
+                "stir",
+                "burst"
             ],
             "correct_order": [
-                "Thursday",
-                "better"
+                "burst",
+                "stir"
             ]
         }
     ]

@@ -1,0 +1,42 @@
+{
+    "questions": [
+        {
+            "question_id": "1",
+            "question_type": "gap-fill-sight-words",
+            "context": "Family Life",
+            "sight_words": [
+                "their",
+                "love"
+            ],
+            "question_text": "The parents showed ______ for ______ children by reading bedtime stories every night.",
+            "gaps": 2,
+            "options": [
+                "their",
+                "love"
+            ],
+            "correct_order": [
+                "love",
+                "their"
+            ]
+        },
+        {
+            "question_id": "2",
+            "question_type": "gap-fill-sight-words",
+            "context": "Work Life",
+            "sight_words": [
+                "because",
+                "done"
+            ],
+            "question_text": "She felt happy ______ she had ______ all her tasks before the end of the day.",
+            "gaps": 2,
+            "options": [
+                "done",
+                "because"
+            ],
+            "correct_order": [
+                "because",
+                "done"
+            ]
+        }
+    ]
+}

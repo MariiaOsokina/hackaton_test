@@ -6,7 +6,7 @@ from anthropic import Anthropic
 import json
 
 
-class GameConfiguration:
+class GameConfigurationSightWords:
     def __init__(self):
         # Instance attributes (can vary per game)
         self.target_group = "adults (20-50 years old) struggling with reading and having basic vocabulary and comprehension abilities"
@@ -17,10 +17,9 @@ class GameConfiguration:
         "questions": [
             {
             "question_id": "[1]",
-            "question_type": "gap-fill",
+            "question_type": "gap-fill-sight-words",
             "context": "[context category]",
-            "phonics": "[sound pattern]",
-            "pattern": "[spelling pattern]",
+            "sight_words": ["word", "word"]
             "question_text": "[sentence with ______ gaps]",
             "gaps": 2,
             "options": ["option", "option"],
@@ -37,37 +36,36 @@ class GameConfiguration:
             "question_id": "1",
             "question_type": "gap-fill",
             "context": "Daily Activities",
-            "phonics": "long 'a' sound",
-            "pattern": "a_e, ai",
-            "question_text": "Every morning, I _____ breakfast at eight. The _____ was falling as I walked to work.",
+            "sight_words": "one, work",
+            "question_text": "______ day I will ______ in a shop of my own but this is fine for me now",
             "gaps": 2,
-            "options": ["rain", "make"],
-            "correct_order": ["make", "rain"]
+            "options": ["work", "one"],
+            "correct_order": ["one", "work"]
             }
         ]
         }"""
 
 
-class GapFillGenerator:
+class GapFillGeneratorSightWords:
     """Class to handle gap fill exercise generation"""
     def __init__(self):
         load_dotenv()
         self.client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-        self.config = GameConfiguration()
+        self.config = GameConfigurationSightWords()
         self.sent_nbr = 2
         
-    def build_prompt(self, focus_phonics: str) -> str:
+    def build_prompt(self, focus_sight_words: str) -> str:
         return f"""
-        Your task is to create engaging gap-fill sentences focusing on specific phonics patterns.
+        Your task is to create engaging gap-fill sentences focusing on specific sight words.
         Please carefully read the following information and instructions before proceeding.        
-        <focus phonics>
-        {focus_phonics}
-        </focus pohonics>
+        <list of sight words>
+        {focus_sight_words}
+        </list of sight words>
         
         TARGET AUDIENCE: 
         - {self.config.target_group}
         EDICATIONAL GOALS:
-        - Reinforce phonics patterns
+        - Reinforce sight words pronunciation 
         - Develop contextual understanding
         
         INSTRUCTIONS:
@@ -77,10 +75,9 @@ class GapFillGenerator:
             - include sufficient context clues for comprehension
             - contain 15-30 words
             - be grammatically correct and natural-sounding
-        3. Focus on the specified phonics patterns, ensuring that the gaps correspond to words exemplifying these patterns.
+        3. Focus on the specified sight words, ensuring that the gaps correspond to words exemplifying these patterns.
         4. Present options in random order
-        5. If using multiple phonics patterns, list all patterns used
-        6. Return response in this exact JSON structure:
+        5. Return response in this exact JSON structure:
         <JSON structure>
         {self.config.response_format}
         </JSON structure>
@@ -96,8 +93,8 @@ class GapFillGenerator:
         - Confirm appropriate context clues
         - Check the response, only JSON file.
         """
-    def generate_exercises(self, focus_phonics: str) -> Dict:
-        prompt = self.build_prompt(focus_phonics)
+    def generate_exercises(self, focus_sight_words: str) -> Dict:
+        prompt = self.build_prompt(focus_sight_words)
         # print(prompt)
         response = self.client.messages.create(
             model=self.config.model,
@@ -112,41 +109,39 @@ class GapFillGenerator:
         return result
 
 def main():
-    patterns = [
-        {
-            'sound': 'er',
-            'pattern': 'er',
-            'examples': ["her", "term", "bitter", "herb", "infer", "better", "chatter", "verb", "faster", "transfer", "stern"]
-        },
-        {
-            'sound': 'er',
-            'pattern': 'ur',
-            'examples': ["burn", "hurt", "church", "blur", "curl", "fur", "furnish", "Thursday", "turn", "slur", "surf", "burst"]
-        },
-        {
-            'sound': 'er',
-            'pattern': 'ir',
-            'examples': ["first", "dirt", "skirt", "sir", "bird", "girl", "birthday", "thirty", "stir", "third", "firm", "birth"]
-        }
+    sight_words_list = [
+        "so",
+        "work",
+        "love",
+        "their",
+        "one",
+        "over",
+        "sure",
+        "two",
+        "knew",
+        "because",
+        "only",
+        "woman",
+        "done",
+        "does",
+        "other"
     ]
+    sight_words_list_str = ''.join(sight_words_list)
+    # Create the full focus_sight_words
+    focus_sight_words = f"""Please focus on these sight words:\n"
+        {sight_words_list_str}"""
 
-    # Create the full focus_phonics
-    focus_phonics = "Please do proper analysis of phonics and focus on these phonics patterns:\n"
-    for pattern in patterns:
-        focus_phonics += f"""
-        - the '{pattern['sound']}' sound in the form of the '{pattern['pattern']}' patterns (letter combinations), "examples": {pattern['examples']}"""
-    
     # Initialize the generator
-    generator = GapFillGenerator()
+    generator = GapFillGeneratorSightWords()
 
     # # Generate exercises
-    result_json = generator.generate_exercises(focus_phonics)
-    print(result_json)
+    result = generator.generate_exercises(focus_sight_words)
+    print(result)
 
-    # result_json = json.loads(result)
+    result_json = json.loads(result)
 
-    # with open('game3_questions.json', 'w') as json_file:
-    #     json.dump(result_json, json_file, indent=4)
+    with open('game3_sight_words_questions.json', 'w') as json_file:
+        json.dump(result_json, json_file, indent=4)
     
     return result_json
 
