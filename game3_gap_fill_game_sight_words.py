@@ -17,7 +17,7 @@ class GameConfigurationSightWords:
         "questions": [
             {
             "question_id": "[1]",
-            "question_type": "gap-fill-sight-words",
+            "question_type": "complete-sentence",
             "context": "[context category]",
             "sight_words": ["word", "word"]
             "question_text": "[sentence with ______ gaps]",
@@ -34,7 +34,7 @@ class GameConfigurationSightWords:
           "questions": [
             {
             "question_id": "1",
-            "question_type": "gap-fill",
+            "question_type": "complete-sentence",
             "context": "Daily Activities",
             "sight_words": "one, work",
             "question_text": "______ day I will ______ in a shop of my own but this is fine for me now",
@@ -107,6 +107,40 @@ class GapFillGeneratorSightWords:
         result = response.content[0].text
         # result_json = json.loads(result)
         return result
+    
+def convert_json_structure(input_json):
+    new_questions = []
+    
+    for q in input_json["questions"]:
+        # Create a new question dictionary with the desired structure
+        new_question = {
+            "question_id": f"[{q['question_id']}]",
+            "question_type": q["question_type"],
+            "sight_words": q["sight_words"],
+            "gaps": q["gaps"],
+            "data": q["options"],
+            "answers": q["correct_order"]
+        }
+        
+        # Convert the question_text to the required format with %//answer//% gaps
+        question_text = q["question_text"]
+        for answer in q["correct_order"]:
+            question_text = question_text.replace("______", "%//" + answer + "//%", 1)
+        new_question["prompts"] = f"[{question_text}]"
+        
+        new_questions.append(new_question)
+    
+    return {"questions": new_questions}
+
+# Example usage:
+input_json = {
+    "questions": [
+        # Your input JSON data here
+    ]
+}
+
+converted_json = convert_json_structure(input_json)
+print(converted_json)
 
 def main():
     sight_words_list = [
@@ -126,7 +160,7 @@ def main():
         "does",
         "other"
     ]
-    sight_words_list_str = ''.join(sight_words_list)
+    sight_words_list_str = ', '.join(sight_words_list)
     # Create the full focus_sight_words
     focus_sight_words = f"""Please focus on these sight words:\n"
         {sight_words_list_str}"""

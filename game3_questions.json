@@ -2,36 +2,24 @@
     "questions": [
         {
             "question_id": "1",
-            "question_type": "gap-fill",
-            "context": "Family Life",
-            "phonics": "er sound",
-            "pattern": "er, ir",
-            "question_text": "My _____ always makes dinner on Thursday night, while my little _____ helps set the table.",
-            "gaps": 2,
-            "options": [
-                "sister",
-                "girl"
+            "question_type": "complete-sentence",
+            "prompts": [
+                "The %//gap//% was walking to the %//gap//% when she saw a %//gap//% standing near her %//gap//%, so she decided to %//gap//% back."
             ],
-            "correct_order": [
-                "sister",
-                "girl"
-            ]
-        },
-        {
-            "question_id": "2",
-            "question_type": "gap-fill",
-            "context": "Weather and Activities",
-            "phonics": "er sound",
-            "pattern": "ur, ir",
-            "question_text": "During the _____ of the storm, we watched the leaves _____ in the strong wind.",
-            "gaps": 2,
-            "options": [
-                "stir",
-                "burst"
+            "gaps": 5,
+            "data": [
+                "girl",
+                "store",
+                "bird",
+                "home",
+                "turn"
             ],
-            "correct_order": [
-                "burst",
-                "stir"
+            "answers": [
+                "girl",
+                "store",
+                "bird",
+                "home",
+                "turn"
             ]
         }
     ]

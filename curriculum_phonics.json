@@ -621,7 +621,7 @@
         "pattern": "o_e",
         "level": 3,
         "description": "split digraph",
-        "examples": ["hope", "smoke", "note", "slope", "rode", "code", "cope", "home", "mope", "spoke"]
+        "examples": ["hope", "smoke", "note", "slope", "rode", "code", "cope", "home", "mope", "spoke", "bone", "cone", "dome", "hole", "joke", "lone", "mode", "nose", "pole", "role", "rope", "rose", "tone", "vote", "woke", "zone", "broke", "choke", "close", "drove", "froze", "globe", "phone", "quote", "stone", "those", "whole", "wrote", "probe", "scope"]
         },
         {
         "pattern": "oe",
@@ -668,7 +668,7 @@
         "pattern": "i_e",
         "level": 3,
         "description": "split digraph",
-        "examples": ["ride", "wine", "fine", "spine", "ripe", "swipe", "spite", "bite", "like", "bike"]
+        "examples": ["ride", "wine", "fine", "spine", "ripe", "swipe", "spite", "bite", "like", "bike", "bite", "dice", "dime", "dive", "file", "fine", "fire", "five", "hide", "hike", "hire", "kite", "life", "like", "lime", "line", "mine", "nice", "nine", "pile", "pine", "pipe", "ride", "ripe", "rise", "side", "site", "size", "time", "tide", "tile", "vine", "wide", "wife", "wine", "wire", "wise", "wipe"]
         },
         {
         "pattern": "ie",

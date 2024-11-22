@@ -2,40 +2,40 @@
     "questions": [
         {
             "question_id": "1",
-            "question_type": "gap-fill-sight-words",
+            "question_type": "complete-sentence",
             "context": "Family Life",
             "sight_words": [
-                "their",
-                "love"
+                "love",
+                "because"
             ],
-            "question_text": "The parents showed ______ for ______ children by reading bedtime stories every night.",
+            "question_text": "The parents showed their ______ for their children ______ they wanted them to be happy and safe.",
             "gaps": 2,
             "options": [
-                "their",
+                "because",
                 "love"
             ],
             "correct_order": [
                 "love",
-                "their"
+                "because"
             ]
         },
         {
             "question_id": "2",
-            "question_type": "gap-fill-sight-words",
-            "context": "Work Life",
+            "question_type": "complete-sentence",
+            "context": "Work Environment",
             "sight_words": [
-                "because",
-                "done"
+                "sure",
+                "work"
             ],
-            "question_text": "She felt happy ______ she had ______ all her tasks before the end of the day.",
+            "question_text": "Make ______ you finish your ______ before leaving the office today, as tomorrow is a holiday.",
             "gaps": 2,
             "options": [
-                "done",
-                "because"
+                "work",
+                "sure"
             ],
             "correct_order": [
-                "because",
-                "done"
+                "sure",
+                "work"
             ]
         }
     ]

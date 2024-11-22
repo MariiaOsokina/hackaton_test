@@ -5,7 +5,6 @@ import os
 from anthropic import Anthropic
 import json
 
-
 class GameConfiguration:
     def __init__(self):
         # Instance attributes (can vary per game)
@@ -20,9 +19,9 @@ class GameConfiguration:
             "question_type": "complete-sentence",
             "context": "[context category]",
             "phonics": "[sound pattern]",
-            "pattern": "[spelling pattern]",
-            "question_text": "[sentence with ______ gaps]",
-            "gaps": 2,
+            "patterns": "[spelling pattern]",
+            "question_text": ["sentence with %//gap//%"],
+            "gaps": [number of gaps],
             "options": ["option", "option"],
             "correct_order": ["option", "option"]
             }
@@ -38,8 +37,8 @@ class GameConfiguration:
             "question_type": "complete-sentence",
             "context": "Daily Activities",
             "phonics": "long 'a' sound",
-            "pattern": "a_e, ai",
-            "question_text": "Every morning, I _____ breakfast at eight. The _____ was falling as I walked to work.",
+            "patterns": "a_e, ai",
+            "question_text": ["Every morning, I %//gap//% breakfast at eight. The %//gap//% was falling as I walked to work."],
             "gaps": 2,
             "options": ["rain", "make"],
             "correct_order": ["make", "rain"]
@@ -55,6 +54,7 @@ class GapFillGenerator:
         self.client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
         self.config = GameConfiguration()
         self.sent_nbr = 2
+        self.gaps_nbr = 5
         
     def build_prompt(self, focus_phonics: str) -> str:
         return f"""
@@ -71,7 +71,7 @@ class GapFillGenerator:
         - Develop contextual understanding
         
         INSTRUCTIONS:
-        1. Generate this number of sentences {self.sent_nbr}, each containing 2 gaps (indicated by a full underscore line: _____)
+        1. Generate this number of sentences {self.sent_nbr}, each containing {self.gaps_nbr} gaps (indicated by %//missing word//%)
         2. Each sentence must:
             - be clear and practical
             - include sufficient context clues for comprehension
@@ -98,10 +98,10 @@ class GapFillGenerator:
         """
     def generate_exercises(self, focus_phonics: str) -> Dict:
         prompt = self.build_prompt(focus_phonics)
-        # print(prompt)
+        print(prompt)
         response = self.client.messages.create(
             model=self.config.model,
-            max_tokens=2000,
+            max_tokens=4000,
             system=self.config.system_prompt,
             messages=[
                 {"role": "user", "content": prompt}
@@ -111,7 +111,23 @@ class GapFillGenerator:
         # result_json = json.loads(result)
         return result
 
-def main():
+def frontend_transform_json(input_json):
+    new_json = {
+        "questions": []
+    }    
+    for question in input_json["questions"]:
+        new_question = {
+            "question_id": question["question_id"],
+            "question_type": question["question_type"],
+            "prompts": question["question_text"],
+            "gaps": question["gaps"],
+            "data": question["options"],
+            "answers": question["correct_order"]
+        }
+        new_json["questions"].append(new_question)
+        return new_json
+
+def GameFillGap():
     patterns = [
         {
             'sound': 'er',
@@ -127,25 +143,12 @@ def main():
             'sound': 'er',
             'pattern': 'ir',
             'examples': ["first", "dirt", "skirt", "sir", "bird", "girl", "birthday", "thirty", "stir", "third", "firm", "birth"]
-        }
-    ]
-
-        patterns2 = [
-        {
-            'sound': 'er',
-            'pattern': 'er',
-            'examples': ["her", "term", "bitter", "herb", "infer", "better", "chatter", "verb", "faster", "transfer", "stern"]
         },
         {
-            'sound': 'er',
-            'pattern': 'ur',
-            'examples': ["burn", "hurt", "church", "blur", "curl", "fur", "furnish", "Thursday", "turn", "slur", "surf", "burst"]
+            "sound": "(Long) ō",
+            "pattern": "o_e",
+            "examples": ["hope", "smoke", "note", "slope", "rode", "code", "cope", "home", "mope", "spoke", "bone", "cone", "dome", "hole", "joke", "lone", "mode", "nose", "pole", "role", "rope", "rose", "tone", "vote", "woke", "zone", "broke", "choke", "close", "drove", "froze", "globe", "phone", "quote", "stone", "those", "whole", "wrote", "probe", "scope"]
         },
-        {
-            'sound': 'er',
-            'pattern': 'ir',
-            'examples': ["first", "dirt", "skirt", "sir", "bird", "girl", "birthday", "thirty", "stir", "third", "firm", "birth"]
-        }
     ]
 
 
@@ -160,14 +163,18 @@ def main():
 
     # # Generate exercises
     result = generator.generate_exercises(focus_phonics)
-    print(result)
+    # print(result)
 
     result_json = json.loads(result)
+    print(f"json {result_json}/n/n")
+
+    result_frontend_json = frontend_transform_json(result_json)
 
     with open('game3_questions.json', 'w') as json_file:
-        json.dump(result_json, json_file, indent=4)
+        json.dump(result_frontend_json, json_file, indent=4)
+    print(result_frontend_json)
     
-    return result_json
+    return result_frontend_json
 
 if __name__ == "__main__":
-    main()
+    GameFillGap()
