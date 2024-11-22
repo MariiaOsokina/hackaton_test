@@ -4,22 +4,44 @@
             "question_id": "1",
             "question_type": "complete-sentence",
             "prompts": [
-                "The %//gap//% was walking to the %//gap//% when she saw a %//gap//% standing near her %//gap//%, so she decided to %//gap//% back."
+                "On %//gap//%, my %//gap//% sister went to %//gap//% to buy a new %//gap//% and some %//gap//%."
             ],
             "gaps": 5,
             "data": [
-                "girl",
-                "store",
-                "bird",
-                "home",
-                "turn"
+                "Thursday",
+                "better",
+                "church",
+                "skirt",
+                "herbs"
             ],
             "answers": [
-                "girl",
-                "store",
-                "bird",
+                "Thursday",
+                "better",
+                "church",
+                "skirt",
+                "herbs"
+            ]
+        },
+        {
+            "question_id": "2",
+            "question_type": "complete-sentence",
+            "prompts": [
+                "After dinner, I went %//gap//% to %//gap//% and %//gap//% while my %//gap//% was watching TV at %//gap//%"
+            ],
+            "gaps": 5,
+            "data": [
+                "sister",
                 "home",
-                "turn"
+                "spoke",
+                "smoke",
+                "rode"
+            ],
+            "answers": [
+                "home",
+                "smoke",
+                "rode",
+                "sister",
+                "spoke"
             ]
         }
     ]

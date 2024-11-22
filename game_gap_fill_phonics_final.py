@@ -54,7 +54,7 @@ class GapFillGenerator:
         self.client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
         self.config = GameConfiguration()
         self.sent_nbr = 2
-        self.gaps_nbr = 5
+        self.gaps_nbr = 3
         
     def build_prompt(self, focus_phonics: str) -> str:
         return f"""
@@ -97,84 +97,92 @@ class GapFillGenerator:
         - Check the response, only JSON file.
         """
     def generate_exercises(self, focus_phonics: str) -> Dict:
-        prompt = self.build_prompt(focus_phonics)
-        print(prompt)
-        response = self.client.messages.create(
-            model=self.config.model,
-            max_tokens=4000,
-            system=self.config.system_prompt,
-            messages=[
-                {"role": "user", "content": prompt}
-            ]
-        )
-        result = response.content[0].text
-        # result_json = json.loads(result)
-        return result
+        try:
+            prompt = self.build_prompt(focus_phonics)
+            print(prompt)
+            response = self.client.messages.create(
+                model=self.config.model,
+                max_tokens=4000,
+                system=self.config.system_prompt,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            result = response.content[0].text
+            # result_json = json.loads(result)
+            return result
+        except Exception as e:
+            return f"Error in generate_exercises: {str(e)}"
 
 def frontend_transform_json(input_json):
-    new_json = {
-        "questions": []
-    }    
-    for question in input_json["questions"]:
-        new_question = {
-            "question_id": question["question_id"],
-            "question_type": question["question_type"],
-            "prompts": question["question_text"],
-            "gaps": question["gaps"],
-            "data": question["options"],
-            "answers": question["correct_order"]
-        }
-        new_json["questions"].append(new_question)
+    try:
+        new_json = {
+            "questions": []
+        }    
+        for question in input_json["questions"]:
+            new_question = {
+                "question_id": question["question_id"],
+                "question_type": question["question_type"],
+                "prompts": question["question_text"],
+                "gaps": question["gaps"],
+                "data": question["options"],
+                "answers": question["correct_order"]
+            }
+            new_json["questions"].append(new_question)
         return new_json
+    except Exception as e:
+        return f"Error in frontend_transform_json: {str(e)}"
 
 def GameFillGap():
-    patterns = [
-        {
-            'sound': 'er',
-            'pattern': 'er',
-            'examples': ["her", "term", "bitter", "herb", "infer", "better", "chatter", "verb", "faster", "transfer", "stern"]
-        },
-        {
-            'sound': 'er',
-            'pattern': 'ur',
-            'examples': ["burn", "hurt", "church", "blur", "curl", "fur", "furnish", "Thursday", "turn", "slur", "surf", "burst"]
-        },
-        {
-            'sound': 'er',
-            'pattern': 'ir',
-            'examples': ["first", "dirt", "skirt", "sir", "bird", "girl", "birthday", "thirty", "stir", "third", "firm", "birth"]
-        },
-        {
-            "sound": "(Long) ō",
-            "pattern": "o_e",
-            "examples": ["hope", "smoke", "note", "slope", "rode", "code", "cope", "home", "mope", "spoke", "bone", "cone", "dome", "hole", "joke", "lone", "mode", "nose", "pole", "role", "rope", "rose", "tone", "vote", "woke", "zone", "broke", "choke", "close", "drove", "froze", "globe", "phone", "quote", "stone", "those", "whole", "wrote", "probe", "scope"]
-        },
-    ]
+    try:
+        patterns = [
+            {
+                'sound': 'er',
+                'pattern': 'er',
+                'examples': ["her", "term", "bitter", "herb", "infer", "better", "chatter", "verb", "faster", "transfer", "stern"]
+            },
+            {
+                'sound': 'er',
+                'pattern': 'ur',
+                'examples': ["burn", "hurt", "church", "blur", "curl", "fur", "furnish", "Thursday", "turn", "slur", "surf", "burst"]
+            },
+            {
+                'sound': 'er',
+                'pattern': 'ir',
+                'examples': ["first", "dirt", "skirt", "sir", "bird", "girl", "birthday", "thirty", "stir", "third", "firm", "birth"]
+            },
+            {
+                "sound": "(Long) ō",
+                "pattern": "o_e",
+                "examples": ["hope", "smoke", "note", "slope", "rode", "code", "cope", "home", "mope", "spoke", "bone", "cone", "dome", "hole", "joke", "lone", "mode", "nose", "pole", "role", "rope", "rose", "tone", "vote", "woke", "zone", "broke", "choke", "close", "drove", "froze", "globe", "phone", "quote", "stone", "those", "whole", "wrote", "probe", "scope"]
+            },
+        ]
 
+        # Create the full focus_phonics
+        focus_phonics = "Please do proper analysis of phonics and focus on these phonics patterns:\n"
+        for pattern in patterns:
+            focus_phonics += f"""
+            - the '{pattern['sound']}' sound in the form of the '{pattern['pattern']}' patterns (letter combinations), "examples": {pattern['examples']}"""
+        
+        # Initialize the generator
+        generator = GapFillGenerator()
 
-    # Create the full focus_phonics
-    focus_phonics = "Please do proper analysis of phonics and focus on these phonics patterns:\n"
-    for pattern in patterns:
-        focus_phonics += f"""
-        - the '{pattern['sound']}' sound in the form of the '{pattern['pattern']}' patterns (letter combinations), "examples": {pattern['examples']}"""
+        # # Generate exercises
+        result = generator.generate_exercises(focus_phonics)
+        # print(result)
+
+        result_json = json.loads(result)
+        # print(f"json {result_json}/n/n")
+
+        result_frontend_json = frontend_transform_json(result_json)
+
+        # with open('game3_questions.json', 'w') as json_file:
+        #     json.dump(result_frontend_json, json_file, indent=4)
+        print(result_frontend_json)
+        
+        return result_frontend_json
+    except Exception as e:
+        return f"Error: {str(e)}"
     
-    # Initialize the generator
-    generator = GapFillGenerator()
-
-    # # Generate exercises
-    result = generator.generate_exercises(focus_phonics)
-    # print(result)
-
-    result_json = json.loads(result)
-    print(f"json {result_json}/n/n")
-
-    result_frontend_json = frontend_transform_json(result_json)
-
-    with open('game3_questions.json', 'w') as json_file:
-        json.dump(result_frontend_json, json_file, indent=4)
-    print(result_frontend_json)
-    
-    return result_frontend_json
-
 if __name__ == "__main__":
     GameFillGap()
